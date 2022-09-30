@@ -56,3 +56,19 @@ def test_create_student_return_empty_list():
     result = create_student(name, level, courses)
 
     assert result["courses"] == []
+def test_student_a_has_more_classes():
+    Angelica = create_student(
+        "Angelica",
+        "sophomore",
+        ["mathematics", "Biology", "Calc"]
+    )
+    Brian = create_student(
+        "Brian",
+        "junior",
+        ["mathematics", "Art"]
+    )
+
+    result = get_student_with_more_classes(Angelica, Brian)
+
+    assert result == Angelica
+
