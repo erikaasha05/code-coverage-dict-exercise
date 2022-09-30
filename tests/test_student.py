@@ -48,3 +48,11 @@ def test_get_student_with_more_classes():
 
 
 # TODO: Write additional tests to reach 100% test coverage
+def test_create_student_return_empty_list():
+    name = "Erika"
+    level = "junior"
+    courses = []
+
+    result = create_student(name, level, courses)
+
+    assert result["courses"] == []
